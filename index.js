@@ -4,6 +4,8 @@ const logger = require('morgan');
 const chalk = require('chalk');
 const app = express();
 const cors = require('cors')
+
+let initRoutes = require("./Routes/basicRoute")
 /**
  * Express configuration.
  */
@@ -21,11 +23,8 @@ app.use(cors());
 //     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 //   }
 
+initRoutes(app);
 
-// simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to HNL application." });
-});
 /**
  * Error Handler.
  */
