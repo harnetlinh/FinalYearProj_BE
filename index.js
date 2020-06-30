@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const logger = require('morgan');
 const chalk = require('chalk');
 const app = express();
+const cors = require('cors')
 /**
  * Express configuration.
  */
@@ -11,6 +12,15 @@ app.set('port', process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080);
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+/**
+ * Config Cors
+ */
+// var corsOptions = {
+//     origin: 'http://example.com',
+//     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+//   }
+
 
 // simple route
 app.get("/", (req, res) => {
