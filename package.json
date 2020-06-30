@@ -1,0 +1,19 @@
+{
+  "name": "finalyearproj_be",
+  "version": "1.0.0",
+  "description": "final year server side nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harnetlinh/FinalYearProj_BE.git"
+  },
+  "author": "HNL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harnetlinh/FinalYearProj_BE/issues"
+  },
+  "homepage": "https://github.com/harnetlinh/FinalYearProj_BE#readme"
+}
